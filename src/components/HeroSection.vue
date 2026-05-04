@@ -1,7 +1,33 @@
 <template>
   <section>
     <div class="main-grid">
-      <h2 class="title-section">High-end residential design & build</h2>
+      <span class="title-xl">
+        <h2 class="title">High-end</h2>
+        <h2 class="title">residential design</h2>
+
+        <span class="title-description">
+          <h2 class="title">& build</h2>
+
+          <span>
+            <button class="btn-discussion">Discuss the Project</button>
+            <p>
+              Our work is defined with careful thinking, technical precision and attention to
+              detail.
+            </p>
+          </span>
+        </span>
+      </span>
+
+      <span class="title-normal">
+        <h2 class="title">High-end residential design & build</h2>
+
+        <span class="title-description">
+          <button class="btn-discussion">Discuss the Project</button>
+          <p>
+            Our work is defined with careful thinking, technical precision and attention to detail.
+          </p>
+        </span>
+      </span>
 
       <div class="cards">
         <div class="card card-1">
@@ -31,8 +57,18 @@
             </span>
 
             <footer>
-              <div class="arrow arrow-left"><-</div>
-              <div class="arrow arrow-right">-></div>
+              <span class="indicators">
+                <div class="indicator indicator-1"></div>
+                <div class="indicator indicator-2"></div>
+                <div class="indicator indicator-3"></div>
+                <div class="indicator indicator-4"></div>
+                <div class="indicator indicator-5"></div>
+              </span>
+
+              <span class="arrows">
+                <div class="arrow arrow-left">🠜</div>
+                <div class="arrow arrow-right">🠞</div>
+              </span>
             </footer>
           </aside>
         </article>

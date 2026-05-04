@@ -14,25 +14,34 @@ section {
     url("./src/assets/images/house-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
 }
 
 .main-grid {
   width: 100%;
-
-  display: grid;
-  grid-template-columns: 2fr 1fr;
 }
 
-.title-section {
-  font-size: 9rem;
-  font-weight: 300;
-  line-height: 8rem;
+.title-description span {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-discussion {
+  border-radius: 0.6rem;
+  border: none;
+
+  background-color: #e4e4e4;
+}
+
+.btn-discussion:hover {
+  cursor: pointer;
+
+  background-color: #fff;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1.5fr;
   gap: 1rem;
 }
 
@@ -53,30 +62,10 @@ section {
   justify-content: space-between;
 }
 
-.card-1 h3,
-.card-2 h3 {
-  font-size: 4rem;
-  font-weight: 300;
-}
-
 .card-3 {
   grid-column: span 2;
   height: 100%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-
   box-sizing: border-box;
-}
-
-.card-3 img {
-  border-radius: 0.7rem;
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: 50% 50%;
 }
 
 .card-3 aside {
@@ -85,12 +74,322 @@ section {
   justify-content: space-between;
 }
 
-.card-3 footer {
+.card-3 footer span {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 
+.indicator {
+  width: 1rem;
+  height: 0.15rem;
+
+  background-color: #ffffff7f;
+}
+
+.indicator:hover {
+  height: 0.3rem;
+  background-color: white;
+}
+
 .arrow {
+  cursor: pointer;
+
+  border-radius: 0.3rem;
   padding: 0.5rem;
+
   background-color: #0000008b;
+}
+.arrow:hover {
+  background-color: #000000b2;
+}
+
+@media screen and (max-width: 499px) {
+  .title-xl {
+    display: none;
+  }
+
+  .title-normal {
+    display: block;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 3rem;
+  }
+
+  .title-description {
+    display: block;
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-discussion {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-size: 1rem;
+  }
+
+  .title-description p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .card-1 h3,
+  .card-2 h3 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .card-3 footer span {
+    margin-top: 1rem;
+  }
+
+  .card-3 img {
+    border-radius: 0.7rem;
+    width: 100%;
+    height: 40%;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .card-3 aside {
+    margin-top: 1rem;
+  }
+
+  .card-3 footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  .title {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+  .title-xl {
+    display: none;
+  }
+
+  .title-normal {
+    display: block;
+  }
+
+  .title-description {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: end;
+    gap: 2rem;
+
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn-discussion {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    font-size: 1rem;
+  }
+
+  .title-description p {
+    font-size: 1rem;
+  }
+
+  .card-1 h3,
+  .card-2 h3 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .card-3 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card-3 img {
+    border-radius: 0.7rem;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .card-3 footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1369px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .title-xl {
+    display: none;
+  }
+
+  .title-normal {
+    display: block;
+  }
+
+  .title {
+    font-size: 8rem;
+    font-weight: 300;
+    line-height: 7rem;
+  }
+
+  .title-description {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: end;
+    gap: 2rem;
+
+    margin-top: 3rem;
+  }
+
+  .btn-discussion {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    font-size: 1rem;
+  }
+
+  .title-description p {
+    font-size: 1rem;
+    max-width: 60%;
+  }
+
+  .cards {
+    grid-template-rows: 1fr 1.5fr;
+  }
+
+  .card-1 h3,
+  .card-2 h3 {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  .card-3 {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card-3 img {
+    border-radius: 0.7rem;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .card-3 footer span {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1370px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .title-xl {
+    display: block;
+  }
+
+  .title-normal {
+    display: none;
+  }
+
+  .title {
+    font-size: 9rem;
+    font-weight: 300;
+    line-height: 8rem;
+  }
+
+  .title-description {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: end;
+    gap: 2rem;
+  }
+
+  .btn-discussion {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    font-size: 1rem;
+  }
+
+  .title-description p {
+    font-size: 1rem;
+    max-width: 30%;
+  }
+
+  .cards {
+    grid-template-rows: 1fr 1.5fr;
+  }
+
+  .card-1 h3,
+  .card-2 h3 {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  .card-3 {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card-3 img {
+    border-radius: 0.7rem;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .card-3 footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
