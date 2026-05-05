@@ -15,14 +15,12 @@ section {
 }
 
 .bg-fade {
-  height: 20vh;
+  height: 18vh;
   background: #000000;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .about-title {
-  display: grid;
-  grid-template-columns: 1fr 0.5fr;
   color: #fff;
 }
 
@@ -67,22 +65,142 @@ section {
 }
 
 @media screen and (max-width: 499px) {
+  h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .cards header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .cards header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn-check {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    font-size: 1rem;
+  }
+
+  .about-title span {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .grid-cards {
+    margin-top: 3rem;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .cards {
+    border: solid 0.1rem #fff;
+    border-radius: 1rem;
+
+    padding: 2rem;
+  }
+
+  .cards header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  h2 {
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1369px) {
-}
-
-@media screen and (min-width: 1370px) {
+@media screen and (min-width: 1023px) {
   h2 {
     font-size: 7rem;
     font-weight: 300;
     line-height: 6rem;
+  }
+
+  h3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-title {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
   }
 
   .btn-check {
@@ -143,15 +261,5 @@ section {
 
     font-size: 2rem;
     font-weight: 300;
-  }
-
-  h3 {
-    font-size: 4.5rem;
-    font-weight: 300;
-  }
-
-  h4 {
-    font-size: 2rem;
-    font-weight: 400;
   }
 }
