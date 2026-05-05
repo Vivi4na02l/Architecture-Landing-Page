@@ -22,7 +22,7 @@ export default {
 <style scoped>
 .bg-image {
   width: 100%;
-  height: 110vh;
+  height: 120vh;
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),

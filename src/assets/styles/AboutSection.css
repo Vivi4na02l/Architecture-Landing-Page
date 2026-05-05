@@ -1,0 +1,157 @@
+section {
+  padding: 2rem;
+  box-sizing: border-box;
+
+  background: #000000;
+  /* background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 6%,
+    rgba(0, 0, 0, 0.75) 12%,
+    rgba(0, 0, 0, 0.9) 18%,
+    rgba(0, 0, 0, 1) 24%,
+    rgba(0, 0, 0, 1) 100%
+  ); */
+}
+
+.bg-fade {
+  height: 20vh;
+  background: #000000;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.about-title {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  color: #fff;
+}
+
+.about-title span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.btn-check {
+  border-radius: 0.6rem;
+  border: none;
+
+  background-color: #e4e4e4;
+}
+
+.btn-check:hover {
+  cursor: pointer;
+
+  background-color: #fff;
+}
+
+.grid-cards {
+  display: grid;
+  color: #fff;
+}
+
+.card-white-bg {
+  background-color: #fff;
+  color: #000;
+}
+
+.card-black-bg header div {
+  background-color: #fff;
+  color: #000000;
+}
+
+.card-white-bg header div {
+  background-color: #000;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 499px) {
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1369px) {
+}
+
+@media screen and (min-width: 1370px) {
+  h2 {
+    font-size: 7rem;
+    font-weight: 300;
+    line-height: 6rem;
+  }
+
+  .btn-check {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    font-size: 1rem;
+  }
+
+  .about-title span {
+    gap: 1rem;
+
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .grid-cards {
+    margin-top: 5rem;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .cards {
+    border: solid 0.1rem #fff;
+    border-radius: 1rem;
+
+    padding: 2rem;
+  }
+
+  .card-1 h4 {
+    margin-top: 11rem;
+  }
+  .card-2 h4 {
+    margin-top: 3rem;
+  }
+  .card-3 h4 {
+    margin-top: 8rem;
+  }
+
+  .cards header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cards header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
