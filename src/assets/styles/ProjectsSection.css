@@ -1,0 +1,270 @@
+section {
+  padding: 7rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 110vh;
+
+  color: #fff;
+  background-color: #000;
+}
+
+h2 {
+  text-align: end;
+}
+
+article,
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+article {
+  padding-top: 3rem;
+
+  height: 70%;
+
+  grid-template-rows: 100% 100%;
+}
+
+img {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.extra-info {
+  border-top: #fff solid 0.1rem;
+  padding: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.extra-info-1 > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.extra-info img {
+  width: 1.5rem;
+  object-fit: contain;
+}
+
+.extra-info-2 > span {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.extra-info-2 > span > span {
+  padding: 0.5rem;
+  border: solid #fff 0.1rem;
+  border-radius: 0.5rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-discussion {
+  border-radius: 0.6rem;
+  border: none;
+
+  background-color: #e4e4e4;
+}
+
+.btn-discussion:hover {
+  cursor: pointer;
+
+  background-color: #fff;
+}
+
+.indicator {
+  width: 5rem;
+  height: 0.15rem;
+
+  background-color: #ffffff7f;
+}
+
+.carousel-btns span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.indicator:hover,
+.indicator-active {
+  cursor: pointer;
+  height: 0.3rem;
+  background-color: white;
+}
+
+.arrow {
+  cursor: pointer;
+
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+
+  border: solid 0.1rem #fff;
+}
+.arrow:hover {
+  background-color: #ffffff3b;
+}
+
+@media screen and (max-width: 499px) {
+  h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 3rem;
+  }
+
+  .project-name {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .project-nbr {
+    font-size: 10rem;
+    font-weight: 300;
+    line-height: 10rem;
+  }
+
+  .btn-discussion {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 3rem;
+  }
+
+  .project-name {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .project-nbr {
+    font-size: 10rem;
+    font-weight: 300;
+    line-height: 10rem;
+  }
+
+  .btn-discussion {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h2 {
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 4rem;
+  }
+
+  .project-name {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .project-nbr {
+    font-size: 20rem;
+    font-weight: 200;
+    line-height: 20rem;
+  }
+
+  .btn-discussion {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1369px) {
+  h2 {
+    font-size: 7rem;
+    font-weight: 300;
+    line-height: 6rem;
+  }
+
+  .project-name {
+    font-size: 4.5rem;
+    font-weight: 300;
+  }
+
+  .project-nbr {
+    font-size: 20rem;
+    font-weight: 200;
+    line-height: 20rem;
+  }
+
+  .btn-discussion {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1370px) {
+  h2 {
+    font-size: 7rem;
+    font-weight: 300;
+    line-height: 6rem;
+  }
+
+  .project-name {
+    font-size: 4.5rem;
+    font-weight: 300;
+  }
+
+  .project-nbr {
+    font-size: 20rem;
+    font-weight: 200;
+    line-height: 20rem;
+  }
+
+  .btn-discussion {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    font-size: 1rem;
+  }
+}
