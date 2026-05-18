@@ -3,7 +3,6 @@ section {
   box-sizing: border-box;
 
   width: 100%;
-  height: 110vh;
 
   color: #fff;
   background-color: #000;
@@ -13,23 +12,11 @@ h2 {
   text-align: end;
 }
 
-article,
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-}
-
 article {
   padding-top: 3rem;
-
-  height: 70%;
-
-  grid-template-rows: 100% 100%;
 }
 
 img {
-  border-radius: 2rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -42,15 +29,6 @@ header {
 .extra-info {
   border-top: #fff solid 0.1rem;
   padding: 1.5rem;
-
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-}
-
-.extra-info-1 > span {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .location {
@@ -61,12 +39,6 @@ header {
 .extra-info img {
   width: 1.5rem;
   object-fit: contain;
-}
-
-.extra-info-2 > span {
-  display: flex;
-  justify-content: end;
-  gap: 1rem;
 }
 
 .extra-info-2 > span > span {
@@ -98,7 +70,6 @@ footer div {
 }
 
 .indicator {
-  width: 5rem;
   height: 0.15rem;
 
   background-color: #ffffff7f;
@@ -136,24 +107,51 @@ footer div {
     line-height: 3rem;
   }
 
+  img {
+    border-radius: 1rem;
+  }
+
   .project-name {
     font-size: 2rem;
     font-weight: 300;
   }
 
   .project-nbr {
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: 300;
-    line-height: 10rem;
+    line-height: 8rem;
+  }
+
+  .extra-info-2 > span {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .btn-discussion {
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
     font-size: 1rem;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer div {
+    width: 100%;
+  }
+
+  .indicators {
+    margin-right: 1rem;
+    width: 100%;
+  }
+
+  .indicator {
+    width: 100%;
+    max-width: 3rem;
   }
 }
 
@@ -164,6 +162,10 @@ footer div {
     line-height: 3rem;
   }
 
+  img {
+    border-radius: 1.5rem;
+  }
+
   .project-name {
     font-size: 3rem;
     font-weight: 300;
@@ -175,6 +177,16 @@ footer div {
     line-height: 10rem;
   }
 
+  .extra-info-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .extra-info-2 > span {
+    gap: 1rem;
+  }
+
   .btn-discussion {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
@@ -182,6 +194,37 @@ footer div {
     padding-right: 1rem;
 
     font-size: 1rem;
+  }
+
+  .indicator {
+    width: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  article {
+    display: grid;
+    grid-template-rows: 1fr 0.75fr;
+  }
+
+  .extra-info-1 > span {
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .extra-info-2 > span {
+    margin-top: 0.5rem;
+
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -192,15 +235,41 @@ footer div {
     line-height: 4rem;
   }
 
+  article,
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  img {
+    border-radius: 2rem;
+  }
+
   .project-name {
     font-size: 3rem;
     font-weight: 300;
   }
 
   .project-nbr {
-    font-size: 20rem;
+    font-size: 15rem;
     font-weight: 200;
-    line-height: 20rem;
+    line-height: 15rem;
+  }
+
+  .extra-info-1 > span {
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .extra-info-2 > span {
+    margin-top: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
   }
 
   .btn-discussion {
@@ -211,13 +280,28 @@ footer div {
 
     font-size: 1rem;
   }
+
+  .indicator {
+    width: 2.5rem;
+  }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1369px) {
+@media screen and (min-width: 1024px) {
   h2 {
     font-size: 7rem;
     font-weight: 300;
     line-height: 6rem;
+  }
+
+  article,
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  img {
+    border-radius: 2rem;
   }
 
   .project-name {
@@ -231,6 +315,23 @@ footer div {
     line-height: 20rem;
   }
 
+  .extra-info {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .extra-info-1 > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .extra-info-2 > span {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+  }
+
   .btn-discussion {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -238,33 +339,17 @@ footer div {
     padding-right: 2rem;
 
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1369px) {
+  .indicator {
+    width: 4rem;
   }
 }
 
 @media screen and (min-width: 1370px) {
-  h2 {
-    font-size: 7rem;
-    font-weight: 300;
-    line-height: 6rem;
-  }
-
-  .project-name {
-    font-size: 4.5rem;
-    font-weight: 300;
-  }
-
-  .project-nbr {
-    font-size: 20rem;
-    font-weight: 200;
-    line-height: 20rem;
-  }
-
-  .btn-discussion {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-
-    font-size: 1rem;
+  .indicator {
+    width: 5rem;
   }
 }
