@@ -4,6 +4,7 @@
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
+      <FormSection />
     </div>
   </div>
 </template>
@@ -12,12 +13,14 @@
 import HeroSection from "./components/HeroSection.vue";
 import AboutSection from "./components/AboutSection.vue";
 import ProjectsSection from "./components/ProjectsSection.vue";
+import FormSection from "./components/FormSection.vue";
 
 export default {
   components: {
     HeroSection,
     AboutSection,
     ProjectsSection,
+    FormSection,
   },
 };
 </script>
