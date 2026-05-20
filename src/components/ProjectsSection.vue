@@ -6,22 +6,21 @@
       <div class="body">
         <header>
           <h3 class="project-nbr">01</h3>
-          <h3 class="project-name">Hillside Residence</h3>
+          <h3 class="project-name">{{ slideContent.title }}</h3>
         </header>
 
         <div class="extra-info extra-info-1">
           <span>
-            <p>2024</p>
+            <p>{{ slideContent.year }}</p>
 
             <span class="location">
               <img src="../assets/images/icon-pin.png" alt="location pin icon" />
-              <p>Los Angeles, USA</p>
+              <p>{{ slideContent.location }}</p>
             </span>
           </span>
 
           <p>
-            A contemporary private residence designed with a strong focus on clarity, proportion and
-            integration between architecture and landscape.
+            {{ slideContent.description }}
           </p>
         </div>
 
@@ -37,7 +36,7 @@
       </div>
 
       <aside>
-        <img src="../assets/images/carousel-house-1.jpeg" alt="picture of the Hillside Residence" />
+        <img :src="slideContent.img" alt="picture of the Hillside Residence" />
       </aside>
     </article>
 
@@ -46,14 +45,14 @@
         <button class="btn-discussion">Discuss the Project</button>
 
         <span>
-          <p>34.0522º N</p>
-          <p>118.2437º W</p>
+          <p>{{ slideContent.coords1 }}</p>
+          <p>{{ slideContent.coords2 }}</p>
         </span>
       </div>
 
       <div class="carousel-btns">
         <span class="indicators">
-          <div class="indicator indicator-active indicator-1"></div>
+          <div class="indicator indicator-active indicator-1" @click="slidePage(1)"></div>
           <div class="indicator indicator-2"></div>
           <div class="indicator indicator-3"></div>
           <div class="indicator indicator-4"></div>
@@ -70,12 +69,35 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, computed } from "vue";
+import carouselHouse1 from "../assets/images/carousel-house-1.jpeg";
 
+const slides = [
+  {
+    title: "Hillside Residence",
+    year: 2024,
+    location: "Los Angeles, USA",
+    img: carouselHouse1,
+    description:
+      "A contemporary private residence designed with a strong focus on clarity, proportion and integration between architecture and landscape.",
+    coords1: "34.0522º N",
+    coords2: "118.2437º W",
+  },
+];
+
+const currentSlide = ref(0);
 const tagTitle = ref(null);
 const isTitleVisible = ref(false);
 
 let observer;
+
+function slidePage(page) {
+  currentSlide.value = page;
+}
+
+const slideContent = computed(() => {
+  return slides[currentSlide.value];
+});
 
 onMounted(() => {
   observer = new IntersectionObserver(
