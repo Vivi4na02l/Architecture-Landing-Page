@@ -22,6 +22,8 @@ section {
 
 .about-title {
   color: #fff;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .about-title span {
@@ -29,6 +31,10 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+}
+
+.aboutActive {
+  opacity: 1;
 }
 
 .btn-check {
@@ -47,6 +53,38 @@ section {
 .grid-cards {
   display: grid;
   color: #fff;
+}
+
+.cards {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.card2Delay {
+  animation-delay: 0.25s;
+}
+
+.card3Delay {
+  animation-delay: 0.5s;
+}
+
+.cardActive {
+  animation-name: flipIn;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipIn {
+  from {
+    opacity: 0;
+    transform: perspective(800px) rotateX(15deg) rotateY(15deg) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0) rotateY(0) scale(1);
+  }
 }
 
 .card-white-bg {

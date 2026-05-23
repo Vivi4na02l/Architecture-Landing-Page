@@ -2,8 +2,8 @@
   <section>
     <h2 ref="tagTitle" :class="{ titleActive: isTitleVisible }">Premium homes made by Axis Haus</h2>
 
-    <article>
-      <div class="body">
+    <article ref="tagArticle">
+      <div class="body" :class="{ leftSideAnimation: isArticleVisible }">
         <header>
           <h3 class="project-nbr">0{{ currentSlide + 1 }}</h3>
           <h3 class="project-name">{{ slideContent.title }}</h3>
@@ -35,13 +35,13 @@
         </div>
       </div>
 
-      <aside>
+      <aside :class="{ rightSideAnimation: isArticleVisible }">
         <img :src="slideContent.img" alt="picture of the Hillside Residence" />
       </aside>
     </article>
 
     <footer>
-      <div>
+      <div :class="{ leftSideAnimation: isArticleVisible }">
         <button class="btn-discussion">Discuss the Project</button>
 
         <span>
@@ -50,7 +50,7 @@
         </span>
       </div>
 
-      <div class="carousel-btns">
+      <div class="carousel-btns" :class="{ rightSideAnimation: isArticleVisible }">
         <span class="indicators">
           <div
             class="indicator indicator-1"
@@ -150,10 +150,6 @@ const slides = [
 ];
 
 const currentSlide = ref(0);
-const tagTitle = ref(null);
-const isTitleVisible = ref(false);
-
-let observer;
 
 function slidePage(page) {
   if (page == 5 && currentSlide.value < 4) {
@@ -169,27 +165,55 @@ const slideContent = computed(() => {
   return slides[currentSlide.value];
 });
 
+// ANIMATIONS
+const tagTitle = ref(null);
+const tagArticle = ref(null);
+
+const isTitleVisible = ref(false);
+const isArticleVisible = ref(false);
+
+let titleObserver;
+let articleObserver;
+
 onMounted(() => {
-  observer = new IntersectionObserver(
+  titleObserver = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
         isTitleVisible.value = true;
 
-        observer.unobserve(entry.target); // animation doesn't happen again
+        titleObserver.unobserve(entry.target); // animation doesn't happen again
       }
     },
     {
-      threshold: 1, //title needs to be this amount of time on the screen to be activate this code section
+      threshold: 1, //title needs to be this amount visible on the screen to be activate this code section
     },
   );
+
+  articleObserver = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        isArticleVisible.value = true;
+
+        articleObserver.unobserve(entry.target); // animation doesn't happen again
+      }
+    },
+    {
+      threshold: 0.8, //article needs to be this amount visible on the screen to be activate this code section
+    },
+  );
+
   if (tagTitle.value) {
-    observer.observe(tagTitle.value); //what identifies what is being watched entering the screen
+    titleObserver.observe(tagTitle.value); //what identifies what is being watched entering the screen
+  }
+
+  if (tagArticle.value) {
+    articleObserver.observe(tagArticle.value); //what identifies what is being watched entering the screen
   }
 });
 
 onBeforeUnmount(() => {
-  if (observer) {
-    observer.disconnect();
+  if (titleObserver) {
+    titleObserver.disconnect();
   }
 });
 </script>

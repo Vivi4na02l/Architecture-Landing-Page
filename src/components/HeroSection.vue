@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section ref="tagSection">
     <div class="main-grid">
-      <span class="title-xl">
+      <span class="title-xl" :class="{ leftSideAnimation: isSectionVisible }">
         <h2 class="title">High-end</h2>
         <h2 class="title">residential design</h2>
 
@@ -18,7 +18,7 @@
         </span>
       </span>
 
-      <span class="title-normal">
+      <span class="title-normal" :class="{ leftSideAnimation: isSectionVisible }">
         <h2 class="title">High-end residential design & build</h2>
 
         <span class="title-description">
@@ -29,7 +29,7 @@
         </span>
       </span>
 
-      <div class="cards">
+      <div class="cards" :class="{ rightSideAnimation: isSectionVisible }">
         <div class="card card-1">
           <h3>10+</h3>
           <p>years of experience</p>
@@ -154,6 +154,40 @@ function slidePage(page) {
 
 const slideContent = computed(() => {
   return slides[currentSlide.value];
+});
+
+//ANIMATIONS
+const tagSection = ref(null);
+
+const isSectionVisible = ref(false);
+
+let observer;
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        if (entry.target == tagSection.value) {
+          isSectionVisible.value = true;
+        }
+
+        observer.unobserve(entry.target); // animation doesn't happen again
+      }
+    },
+    {
+      threshold: 0.75, //section needs to be this amount visible on the screen to be activate this code section
+    },
+  );
+
+  if (tagSection.value) {
+    observer.observe(tagSection.value); //what identifies what is being watched entering the screen
+  }
+});
+
+onBeforeUnmount(() => {
+  if (observer) {
+    observer.disconnect();
+  }
 });
 </script>
 
