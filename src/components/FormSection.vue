@@ -24,14 +24,16 @@
       </p>
     </div>
 
-    <div class="body" :style="backgroundContent" ref="carouselSection">
-      <div>
-        <h3>{{ slideContent.title }}</h3>
-        <p>
-          {{ slideContent.description }}
-        </p>
+    <transition name="slide-fade" mode="out-in">
+      <div class="body" :style="backgroundContent" ref="carouselSection" :key="currentSlide">
+        <div>
+          <h3>{{ slideContent.title }}</h3>
+          <p>
+            {{ slideContent.description }}
+          </p>
+        </div>
       </div>
-    </div>
+    </transition>
 
     <div class="indicators">
       <div
@@ -119,7 +121,7 @@ const handleScroll = (e) => {
     return;
   }
 
-  // isAnimating.value = true; // activates animation
+  isAnimating.value = true; // activates animation
 
   console.log(currentSlide.value, slides.length);
 
@@ -139,6 +141,10 @@ const handleScroll = (e) => {
       slidePage(-1); // goes to slide before
     }
   }
+
+  setTimeout(() => {
+    isAnimating.value = false;
+  }, 700);
 };
 
 onMounted(() => {
