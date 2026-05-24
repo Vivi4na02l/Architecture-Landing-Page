@@ -39,12 +39,6 @@ section {
   background-color: #fff;
 }
 
-.title-xl,
-.title-normal,
-.cards {
-  opacity: 0;
-}
-
 .leftSideAnimation {
   animation-name: slideInLeft;
   animation-duration: 1s;
@@ -54,12 +48,10 @@ section {
 
 @keyframes slideInLeft {
   from {
-    opacity: 0;
     transform: translateX(-25%) scale(0.95);
   }
 
   to {
-    opacity: 1;
     transform: translateX(0) scale(1);
   }
 }
@@ -73,12 +65,10 @@ section {
 
 @keyframes slideInRight {
   from {
-    opacity: 0;
     transform: translateX(25%) scale(0.95);
   }
 
   to {
-    opacity: 1;
     transform: translateX(0) scale(1);
   }
 }
@@ -94,9 +84,10 @@ section {
   border: solid #ffffff32 0.1rem;
 
   padding: 1rem;
-
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   backdrop-filter: blur(0.3rem);
+  backdrop-filter: blur(0.3rem);
+  -webkit-backdrop-filter: blur(0.3rem);
 }
 
 .card-1,

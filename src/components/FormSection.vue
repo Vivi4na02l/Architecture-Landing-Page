@@ -24,7 +24,7 @@
       </p>
     </div>
 
-    <div class="body" :style="backgroundContent">
+    <div class="body" :style="backgroundContent" ref="carouselSection">
       <div>
         <h3>{{ slideContent.title }}</h3>
         <p>
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, computed } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 import formHouse1 from "../assets/images/form-house-1.jpg";
 import formHouse2 from "../assets/images/form-house-2.jpg";
 import formHouse3 from "../assets/images/form-house-3.jpeg";
@@ -100,6 +100,74 @@ const backgroundContent = computed(() => {
   return {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slideContent.value.img})`,
   };
+});
+
+// SCROLLING THROUGH PAGES
+const carouselSection = ref(null);
+const isAnimating = ref(false);
+const isLocked = ref(false); //var used to regulate if scroll scrolls through page or thro the carousel slides
+
+const handleScroll = (e) => {
+  if (!isLocked.value) {
+    return;
+  }
+
+  e.preventDefault(); //stops page from scrolling
+
+  if (isAnimating.value) {
+    // if animation is ongoing, doesn't activate it again
+    return;
+  }
+
+  // isAnimating.value = true; // activates animation
+
+  console.log(currentSlide.value, slides.length);
+
+  if (e.deltaY > 0) {
+    // checks if scroll is going down
+    if (currentSlide.value == slides.length - 1) {
+      // if it's on the last slide
+      isLocked.value = false; // unlocks scroll so scroll scrolls the page again
+    } else {
+      slidePage(5); // goes to next slide
+    }
+  } else {
+    // if it is going up
+    if (currentSlide.value == 0) {
+      isLocked.value = false;
+    } else {
+      slidePage(-1); // goes to slide before
+    }
+  }
+};
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.intersectionRatio >= 0.95) {
+        isLocked.value = true; // locks scroll when carousel enters viewport
+      }
+    },
+    {
+      threshold: 0.95,
+    },
+  );
+
+  observer.observe(carouselSection.value);
+
+  window.addEventListener("wheel", handleScroll, {
+    passive: false,
+  });
+
+  onUnmounted(() => {
+    observer.disconnect();
+
+    window.removeEventListener("wheel", handleScroll);
+  });
+});
+
+window.addEventListener("wheel", () => {
+  console.log(currentSlide.value, slides.length, isLocked.value);
 });
 </script>
 
