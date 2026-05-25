@@ -178,5 +178,5 @@ window.addEventListener("wheel", () => {
 </script>
 
 <style scoped>
-@import "@/assets/styles/FormSection.css";
+@import "@/assets/styles/ProcessSection.css";
 </style>
