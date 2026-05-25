@@ -4,6 +4,7 @@
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
+      <ProcessSection />
       <FormSection />
     </div>
   </div>
@@ -13,6 +14,7 @@
 import HeroSection from "./components/HeroSection.vue";
 import AboutSection from "./components/AboutSection.vue";
 import ProjectsSection from "./components/ProjectsSection.vue";
+import ProcessSection from "./components/ProcessSection.vue";
 import FormSection from "./components/FormSection.vue";
 
 export default {
@@ -20,6 +22,7 @@ export default {
     HeroSection,
     AboutSection,
     ProjectsSection,
+    ProcessSection,
     FormSection,
   },
 };
