@@ -12,6 +12,11 @@ h2 {
   text-align: end;
   opacity: 0;
   transition: opacity 1s ease;
+
+  background: linear-gradient(to left, #505050 0%, #ffffff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .titleActive {
