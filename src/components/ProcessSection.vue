@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="indicators-nbr">
+    <div class="indicators-nbr" id="process">
       <p
         class="indicator-nbr indicator-nbr-1"
         :class="currentSlide == 0 ? 'indicator-nbr-active' : ''"

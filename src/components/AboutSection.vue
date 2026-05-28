@@ -1,6 +1,6 @@
 <template>
   <div class="bg-fade"></div>
-  <section>
+  <section id="about">
     <div ref="tagTitle" class="about-title" :class="{ aboutActive: isTitleVisible }">
       <h2>A modern studio with a clear focus</h2>
 

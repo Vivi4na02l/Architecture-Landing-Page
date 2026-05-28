@@ -1,5 +1,5 @@
 <template>
-  <section ref="tagSection">
+  <section ref="tagSection" id="hero">
     <div class="main-grid">
       <span class="title-xl" :class="{ leftSideAnimation: isSectionVisible }">
         <h2 class="title">High-end</h2>

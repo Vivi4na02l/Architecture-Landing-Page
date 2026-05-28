@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h2 ref="tagTitle" :class="{ titleActive: isTitleVisible }">Premium homes made by Axis Haus</h2>
+    <h2 id="projects" ref="tagTitle" :class="{ titleActive: isTitleVisible }">
+      Premium homes made by Axis Haus
+    </h2>
 
     <article ref="tagArticle">
       <div class="body" :class="{ leftSideAnimation: isArticleVisible }">

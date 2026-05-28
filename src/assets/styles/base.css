@@ -11,6 +11,10 @@ figure {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;

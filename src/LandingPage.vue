@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="bg-image">
+      <NavBar />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
 import HeroSection from "./components/HeroSection.vue";
 import AboutSection from "./components/AboutSection.vue";
 import ProjectsSection from "./components/ProjectsSection.vue";
@@ -19,6 +21,7 @@ import FormSection from "./components/FormSection.vue";
 
 export default {
   components: {
+    NavBar,
     HeroSection,
     AboutSection,
     ProjectsSection,
