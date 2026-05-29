@@ -13,6 +13,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #000;
+
+  z-index: 20;
+}
+
+.menuOpen {
+  border: solid 0.1rem #3d3d3d;
 }
 
 .links {
@@ -49,10 +55,103 @@ button:hover {
   background-color: #ffffff;
 }
 
+/** XS screens nav menu */
+.xsNavMenu {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: white;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+}
+
+.xsMenuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.xsMenuList li {
+  margin: 2rem 0;
+}
+
+.xsMenuList a {
+  font-size: 4rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.xsMenuList a:hover {
+  opacity: 0.7;
+}
+
+.menu-enter-active,
+.menu-leave-active {
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu-enter-from {
+  transform: translateY(-100%);
+}
+
+.menu-enter-to {
+  transform: translateY(0);
+}
+
+.menu-leave-from {
+  transform: translateY(0);
+}
+
+.menu-leave-to {
+  transform: translateY(-100%);
+}
+
 @media screen and (max-width: 499px) {
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
+  nav {
+    border-radius: 0.75rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  span {
+    border-radius: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+  }
+
+  .links {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -80,6 +179,10 @@ button:hover {
 
     font-size: 0.9rem;
   }
+
+  span {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -106,5 +209,9 @@ button:hover {
     padding-right: 1rem;
 
     font-size: 1rem;
+  }
+
+  span {
+    display: none;
   }
 }
