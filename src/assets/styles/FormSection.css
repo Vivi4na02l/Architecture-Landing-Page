@@ -1,4 +1,6 @@
 section {
+  position: relative;
+
   color: #fff;
 }
 
@@ -36,19 +38,71 @@ textarea {
   border-bottom: #fff 0.1rem solid;
   padding: 1rem;
   background-color: transparent;
+  color: #fff;
+}
+
+textarea {
+  resize: none;
 }
 
 .btn-submit {
+  border: #fff 0.1rem solid;
   border-radius: 0.6rem;
-  border: none;
 
-  background-color: #e4e4e4;
+  background-color: #ffffff;
+  color: #000;
 }
 
 .btn-submit:hover {
   cursor: pointer;
 
-  background-color: #fff;
+  border: #fff 0.1rem solid;
+  background-color: #000;
+  color: #fff;
+}
+
+.notificationWrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.notificationMessage {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  background-color: #a93838;
+}
+
+.notificationMessage p {
+  font-size: 1.2rem;
+}
+
+/* animation for notification message */
+.menu-enter-active,
+.menu-leave-active {
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu-enter-from {
+  transform: translateY(100%);
+}
+
+.menu-enter-to {
+  transform: translateY(0);
+}
+
+.menu-leave-from {
+  transform: translateY(0);
+}
+
+.menu-leave-to {
+  transform: translateY(100%);
 }
 
 @media screen and (max-width: 499px) {

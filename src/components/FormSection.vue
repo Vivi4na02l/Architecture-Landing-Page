@@ -26,20 +26,52 @@
       </span>
     </div>
 
-    <form>
-      <input id="txtName" type="text" placeholder="Name" />
+    <form @submit.prevent="handleSubmit">
+      <input id="txtName" type="text" placeholder="Name" v-model="txtName" />
 
-      <input id="txtEmail" type="email" placeholder="Email" />
+      <input id="txtEmail" type="email" placeholder="Email" v-model="txtEmail" />
 
-      <textarea name="Message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+      <textarea
+        name="Message"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Message"
+        v-model="txtMessage"
+      ></textarea>
 
       <input class="btn-submit" type="submit" value="Get in touch" />
     </form>
+
+    <Transition name="menu" @enter="onEnter" @leave="onLeave">
+      <span class="notificationWrapper" v-show="formSubmitted">
+        <div class="notificationMessage">
+          <p>Thank you {{ txtName }}!</p>
+          <p>
+            This contact form is part of a portfolio demonstration. Your message has not been sent
+            and no data has been stored.
+          </p>
+        </div>
+      </span>
+    </Transition>
   </section>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { ref } from "vue";
+
+const formSubmitted = ref(false);
+const txtName = ref("");
+const txtEmail = ref("");
+const txtMessage = ref("");
+
+function handleSubmit() {
+  formSubmitted.value = true;
+
+  setTimeout(() => {
+    formSubmitted.value = false;
+  }, 5000);
+}
 </script>
 
 <style scoped>
