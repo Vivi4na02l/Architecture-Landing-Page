@@ -7,11 +7,15 @@
       <p>
         Design credit:
         <a
+          target="_blank"
           href="https://www.behance.net/gallery/246093727/AXIS-HAUS-Visual-Identity-Website?tracking_source=search_projects%7Cwebsite+design&l=18"
           >Anna Yurieva and Pavel Lozovyi.</a
         >
       </p>
-      <p>Images credit: <a href="https://www.vecteezy.com/free-photos/modern-house">Vecteezy</a></p>
+      <p>
+        Images credit:
+        <a target="_blank" href="https://www.vecteezy.com/free-photos/modern-house">Vecteezy</a>
+      </p>
     </div>
   </footer>
 </template>
