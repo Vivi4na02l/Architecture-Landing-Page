@@ -7,6 +7,7 @@
       <ProjectsSection />
       <ProcessSection />
       <FormSection />
+      <FooterSection />
     </div>
   </div>
 </template>
@@ -18,6 +19,7 @@ import AboutSection from "./components/AboutSection.vue";
 import ProjectsSection from "./components/ProjectsSection.vue";
 import ProcessSection from "./components/ProcessSection.vue";
 import FormSection from "./components/FormSection.vue";
+import FooterSection from "./components/FooterSection.vue";
 
 export default {
   components: {
@@ -27,6 +29,7 @@ export default {
     ProjectsSection,
     ProcessSection,
     FormSection,
+    FooterSection,
   },
 };
 </script>
