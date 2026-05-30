@@ -111,10 +111,7 @@ button:hover {
   transform: translateY(-100%);
 }
 
-@media screen and (max-width: 499px) {
-}
-
-@media screen and (min-width: 500px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   nav {
     border-radius: 0.75rem;
     margin-left: 2rem;
