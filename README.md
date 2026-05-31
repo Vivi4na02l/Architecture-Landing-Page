@@ -3,6 +3,9 @@ A responsive landing page built with Vue.js as a frontend development practice p
 
 The project focuses on translating a design concept into a fully interactive web experience while exploring modern frontend techniques such as component-based architecture, responsive layouts and scroll-triggered animations.
 
+🔗 Live Demo  
+[Visit the website]([https://vivi4na02l.github.io/Wordle-React/](https://vivi4na02l.github.io/Architecture-Landing-Page/))
+
 ## Preview
 ![Landing page preview](./landingpage_screenshot.png)
 
@@ -31,6 +34,6 @@ This project was created to improve and demonstrate skills in:
 * Component reusability
 
 ## Credits
-The visual design belongs to [Anna Yurieva and Pavel Lozovyi](https://www.behance.net/gallery/246093727/AXIS-HAUS-Visual-Identity-Website?tracking_source=search_projects%7Cwebsite+design&l=18).
-House images by [Vecteezy](https://www.vecteezy.com/free-photos/modern-house)
-Icon images by [flaticon](https://www.flaticon.com/)
+* The visual design belongs to [Anna Yurieva and Pavel Lozovyi](https://www.behance.net/gallery/246093727/AXIS-HAUS-Visual-Identity-Website?tracking_source=search_projects%7Cwebsite+design&l=18).
+* House images by [Vecteezy](https://www.vecteezy.com/free-photos/modern-house)
+* Icon images by [flaticon](https://www.flaticon.com/)
