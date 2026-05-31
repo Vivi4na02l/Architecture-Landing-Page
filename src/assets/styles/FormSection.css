@@ -191,8 +191,6 @@ textarea {
 
 @media screen and (min-width: 1024px) {
   section {
-    height: 60vh;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

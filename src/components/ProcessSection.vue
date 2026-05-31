@@ -59,7 +59,7 @@
 import { ref, onMounted, onUnmounted, computed } from "vue";
 import formHouse1 from "../assets/images/form-house-1.jpg";
 import formHouse2 from "../assets/images/form-house-2.jpg";
-import formHouse3 from "../assets/images/form-house-3.jpeg";
+import formHouse3 from "../assets/images/form-house-3.jpg";
 
 const slides = [
   {

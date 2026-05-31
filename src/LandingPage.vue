@@ -1,7 +1,7 @@
 <template>
   <div>
+    <NavBar />
     <div class="bg-image">
-      <NavBar />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
@@ -37,7 +37,6 @@ export default {
 <style scoped>
 .bg-image {
   width: 100%;
-  height: 120vh;
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -45,5 +44,23 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+@media screen and (max-height: 354px) {
+  .bg-image {
+    height: 220vh;
+  }
+}
+
+@media screen and (min-height: 355px) and (max-height: 594px) {
+  .bg-image {
+    height: 170vh;
+  }
+}
+
+@media screen and (min-height: 595px) {
+  .bg-image {
+    height: 120vh;
+  }
 }
 </style>

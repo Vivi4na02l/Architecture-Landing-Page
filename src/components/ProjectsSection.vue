@@ -92,7 +92,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
-import carouselHouse1 from "../assets/images/carousel-house-1.jpeg";
+import carouselHouse1 from "../assets/images/carousel-house-1.jpg";
 import carouselHouse2 from "../assets/images/carousel-house-2.jpg";
 import carouselHouse3 from "../assets/images/carousel-house-3.jpg";
 import carouselHouse4 from "../assets/images/carousel-house-4.jpg";
@@ -151,6 +151,13 @@ const slides = [
   },
 ];
 
+function preloadImages() {
+  slides.forEach((slide) => {
+    const img = new Image();
+    img.src = slide.img.src;
+  });
+}
+
 const currentSlide = ref(0);
 
 function slidePage(page) {
@@ -178,6 +185,8 @@ let titleObserver;
 let articleObserver;
 
 onMounted(() => {
+  preloadImages();
+
   titleObserver = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
@@ -200,7 +209,7 @@ onMounted(() => {
       }
     },
     {
-      threshold: 0.8, //article needs to be this amount visible on the screen to be activate this code section
+      threshold: 0.5, //article needs to be this amount visible on the screen to be activate this code section
     },
   );
 

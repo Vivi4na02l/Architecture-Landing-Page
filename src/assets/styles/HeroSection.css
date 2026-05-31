@@ -1,6 +1,5 @@
 section {
   width: 100%;
-  height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
 
@@ -8,13 +7,6 @@ section {
   align-items: end;
 
   color: white;
-
-  /* background-image:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("./src/assets/images/house-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%; */
 }
 
 .main-grid {
@@ -139,6 +131,24 @@ section {
 .arrow:hover {
   color: #000;
   background-color: #ffffffb2;
+}
+
+@media screen and (max-height: 354px) {
+  section {
+    height: 200vh;
+  }
+}
+
+@media screen and (min-height: 355px) and (max-height: 594px) {
+  section {
+    height: 150vh;
+  }
+}
+
+@media screen and (min-height: 595px) {
+  section {
+    height: 100vh;
+  }
 }
 
 @media screen and (max-width: 499px) {

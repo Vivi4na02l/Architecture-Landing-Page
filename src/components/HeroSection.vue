@@ -1,5 +1,6 @@
 <template>
   <section ref="tagSection" id="hero">
+    <div></div>
     <div class="main-grid">
       <span class="title-xl" :class="{ leftSideAnimation: isSectionVisible }">
         <h2 class="title">High-end</h2>
@@ -98,7 +99,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
-import carouselHouse1 from "../assets/images/carousel-house-1.jpeg";
+import carouselHouse1 from "../assets/images/carousel-house-1.jpg";
 import carouselHouse2 from "../assets/images/carousel-house-2.jpg";
 import carouselHouse3 from "../assets/images/carousel-house-3.jpg";
 import carouselHouse4 from "../assets/images/carousel-house-4.jpg";
